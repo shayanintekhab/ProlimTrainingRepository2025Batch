@@ -1,0 +1,28 @@
+
+public class TypeCastingExamples {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		byte a=10;
+		short b=a;		// implicit type casting 
+		System.out.println(a);
+		System.out.println(b);
+		
+		short c=10;
+		//byte d=c;			byte d = (type)c
+		byte d = (byte)c;			// explicit type casting 
+		System.out.println(c);
+		System.out.println(d);
+		
+		int m=100;
+		float n=m;		// implicit type casting 
+		System.out.println(m);
+		System.out.println(n);
+		//float o=(float)100.0;
+		float o= 100.0f;		// explicit type casting converting double to float 
+		int p = (int)o;		// explicit type casting 
+		System.out.println(o);
+		System.out.println(p);
+	}
+
+}

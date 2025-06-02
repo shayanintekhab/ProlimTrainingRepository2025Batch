@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+D:\Desktop\Prolim Java Full Stack Training\Prolim Training Repository\Core Java Programs\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+701979643.index
+307216343.index
