@@ -17,10 +17,10 @@ public class Car {
 //		price = price1;
 //	}
 
-Car(int wheel, String colour, double price){
-	this.wheel = wheel;
-	this.colour=colour;
-	this.price = price;
+Car(int wheel1, String colour1, double price1){
+	wheel = wheel1;
+	colour=colour1;
+	price = price1;
 }
 	String findColor() {
 		return "Car colour is "+colour;

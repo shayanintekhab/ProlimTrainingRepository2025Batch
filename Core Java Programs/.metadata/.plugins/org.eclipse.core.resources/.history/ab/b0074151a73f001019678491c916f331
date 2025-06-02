@@ -18,9 +18,9 @@ public class Car {
 //	}
 
 Car(int wheel, String colour, double price){
-	this.wheel = wheel;
-	this.colour=colour;
-	this.price = price;
+	wheel = wheel;
+	colour=colour;
+	price = price;
 }
 	String findColor() {
 		return "Car colour is "+colour;
