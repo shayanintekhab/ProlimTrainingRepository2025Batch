@@ -38,11 +38,13 @@ public class MethodOverridingExamples {
 	
 	//Pulsar pu2 = new Bike();	// creating super class object and assigning to sub class object reference not possible 
 	Bike bb2 = new Pulsar();	// creating sub class object and assigning to super class reference possible 
+	//System.out.println(bb2);
 	bb2.speed();		// we can call only super class or override methods 
 	//bb2.mailage();
-	Pulsar p3 = (Pulsar)bb2;		// explicit type casting on object level.
+	Pulsar p3 =(Pulsar)bb2;		// explicit type casting on object level.
 	p3.speed();					// method overriding 
 	p3.mailage();	
+	//System.out.println(p3);
 	}
 
 }
