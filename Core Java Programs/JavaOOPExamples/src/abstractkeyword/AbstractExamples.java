@@ -14,6 +14,9 @@ class Pulsar extends Bike {
 	void speed() {
 		System.out.println("speed override 90km/hr");
 	}
+	void speed(int x) {
+		System.out.println("speed override 90km/hr");
+	}
 }
 class Honda extends Bike {
 	@Override
@@ -29,5 +32,8 @@ public class AbstractExamples {
 		Honda hh  = new Honda();
 		hh.mailage();
 		hh.speed();
+		//Bike bb = new Bike();		// error 
+		Bike bb = new Pulsar();		// abstract class reference creating. 
+		
 	}
 }
