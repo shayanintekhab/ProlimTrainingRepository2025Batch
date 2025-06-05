@@ -441,3 +441,6 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-05 14:17:38.414
 !MESSAGE Classpath changed for project: ProductArrayObjectExamples
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-05 16:23:47.752
+!MESSAGE Classpath changed for project: ExceptionHandlingExamples
