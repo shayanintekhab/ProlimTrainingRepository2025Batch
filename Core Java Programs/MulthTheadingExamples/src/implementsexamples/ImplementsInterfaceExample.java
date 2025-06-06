@@ -22,7 +22,7 @@ public class ImplementsInterfaceExample {
 	Runnable obj2 = new B();
 	Thread t1  = new Thread(obj1);		// Thread class reference 
 	Thread t2 = new Thread(obj2);
-	t1.start();
+	t1.start();			// it will call run method of thread class with empty body 
 	t2.start();
 	}
 
