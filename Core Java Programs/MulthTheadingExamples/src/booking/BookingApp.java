@@ -30,9 +30,13 @@ public class BookingApp {
 	TicketBooking tbooking1 = new TicketBooking();	// heap memory created 3 ticket available 	
 	//TicketBooking tbooking2 = new TicketBooking();	// heap memory created 3 ticket available 	
 	BookingThread t1 = new BookingThread(tbooking1,"John",2);		// client 1 
-	BookingThread t2 = new BookingThread(tbooking1,"Raju",3);		// client 2 
+	BookingThread t2 = new BookingThread(tbooking1,"Raju",2);		// client 2 
+	BookingThread t3 = new BookingThread(tbooking1,"Raj",1);	
+	BookingThread t4 = new BookingThread(tbooking1,"Ajay",4);	
 	t1.start();
 	t2.start();
+	t3.start();
+	t4.start();
 	}
 
 }

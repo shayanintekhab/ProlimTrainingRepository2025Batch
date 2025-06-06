@@ -32,7 +32,7 @@ public class GameExample {
 	Car cc2 = new Car();				// new memory 
 	Thread t1 = new Thread(bb1);
 	Thread t2 = new Thread(cc1);
-	Thread t3 = new Thread(cc2);
+	Thread t3 = new Thread(cc1);
 	Thread t = Thread.currentThread();
 	System.out.println("In main thread = "+t.getName());
 	t1.setName("1st Bike");
