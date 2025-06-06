@@ -6,7 +6,6 @@ private boolean availabe = false;
 
 public synchronized void issueTicket(int number) throws Exception{
 	//System.out.println("Ticket issue "+number);
-	
 	while(availabe) {
 		wait();
 	}
@@ -14,7 +13,6 @@ public synchronized void issueTicket(int number) throws Exception{
 	System.out.println("Clerk issue the ticket "+ticket);
 	availabe=true;
 	notify();
-	
 }
 public synchronized void collectTicket() throws Exception{
 	//System.out.println("Collect the ticket");

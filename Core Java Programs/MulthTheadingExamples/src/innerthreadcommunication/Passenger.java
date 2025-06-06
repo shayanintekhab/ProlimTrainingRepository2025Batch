@@ -8,7 +8,7 @@ public Passenger(TicketWindow tw) {
 	@Override
 	public void run() {
 		try {
-			for(int i=1;i<5;i++) {
+			for(int i=0;i<5;i++) {
 				tw.collectTicket();
 				Thread.sleep(500);
 			}
