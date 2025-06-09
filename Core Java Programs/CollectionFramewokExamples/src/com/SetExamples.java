@@ -16,16 +16,38 @@ public class SetExamples {
 
 	public static void main(String[] args) {
 	// 1st Example with HashSet with other data types value store 	
-	HashSet hs = new HashSet();	
-	Integer a = new Integer(10);
-	hs.add(a);		//we store integer object. 
-	hs.add(20);	// auto - boxing : converting int value to Object. 
-	hs.add(10.20);
-	hs.add(true);
-	hs.add("Ravi");
-	hs.add(new A());
-	hs.add(new B());
-	System.out.println(hs);	// it display string format 
+//	HashSet hs = new HashSet();	
+//	Integer a = new Integer(10);
+//	hs.add(a);		//we store integer object. 
+//	hs.add(20);	// auto - boxing : converting int value to Object. 
+//	hs.add(10.20);
+//	hs.add(true);
+//	hs.add("Ravi");
+//	hs.add(new A());
+//	hs.add(new B());
+//	System.out.println(hs);	// it display string format 
+		
+	// 2nd Example HashSet with all methods 
+		
+		HashSet hs = new HashSet();
+		System.out.println("Size "+hs.size());
+		System.out.println("Empty "+hs.isEmpty());
+		hs.add(20);
+		hs.add(10);
+		hs.add(60);
+		hs.add(40);
+		hs.add(20);
+		System.out.println(hs);
+		System.out.println("Size "+hs.size());
+		System.out.println("Empty "+hs.isEmpty());
+		System.out.println("Search "+hs.contains(20));
+		System.out.println("Search "+hs.contains(200));
+		System.out.println("Remove "+hs.remove(10));
+		System.out.println("Remove "+hs.remove(100));
+		System.out.println(hs);
+		hs.clear();
+		System.out.println("Empty "+hs.isEmpty());
+		System.out.println("Size "+hs.size());
 	}
 
 }
