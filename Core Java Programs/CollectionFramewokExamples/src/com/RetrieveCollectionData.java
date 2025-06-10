@@ -46,7 +46,7 @@ public class RetrieveCollectionData {
 			}
 	
 	// using ListIterator 
-			System.out.println("Retreive element - forward direction");
+	System.out.println("Retreive element - forward direction");
 	ListIterator<String> ii2 = names.listIterator();
 	while(ii2.hasNext()) {
 		String name = ii2.next();
