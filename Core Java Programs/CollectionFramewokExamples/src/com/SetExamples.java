@@ -89,6 +89,10 @@ public class SetExamples {
 		// 5th example 
 		
 		Set ss = new HashSet();
+		ss.add(10);
+		ss.add(20);
+		ss.add(30);
+		System.out.println(ss.contains(10));
 	}
 
 }

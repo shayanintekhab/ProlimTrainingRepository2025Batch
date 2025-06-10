@@ -1,6 +1,0 @@
-package com;
-
-public class Car {
-	int wheel;
-	String colour;
-}
