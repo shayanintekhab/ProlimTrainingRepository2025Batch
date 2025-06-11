@@ -26,7 +26,8 @@ public class CharacterWiseClassesExamples {
 		// 2nd program 
 		// source : file destination : file 
 		FileReader fr = new FileReader("abc.txt");
-		FileWriter fw = new FileWriter("sample.txt");
+		//FileWriter fw = new FileWriter("sample.txt");
+		FileWriter fw = new FileWriter("sample.txt",true);
 		int ch;
 		while((ch=fr.read()) != -1) {
 			fw.write(ch);
