@@ -29,10 +29,11 @@ public class PrimitiveReadAndWriteOperation {
 		
 		// read primitive data from file system 
 		
-		
+		FileInputStream fis=null;
+		DataInputStream dis=null;
 		try {
-		FileInputStream fis = new FileInputStream("emp.txt");
-		DataInputStream dis = new DataInputStream(fis);
+		fis = new FileInputStream("emp.txt");
+		dis = new DataInputStream(fis);
 		int id1 = dis.readInt();
 		String name1 = dis.readUTF();
 		float salary1 = dis.readFloat();
@@ -41,10 +42,14 @@ public class PrimitiveReadAndWriteOperation {
 		System.out.println("name is "+name1);
 		System.out.println("salary is "+salary1);
 		System.out.println("result is "+result1);
-		dis.close();
-		dis.close();
+		
 		}catch(Exception e) {
 			System.err.println(e);
+		}finally {
+			try {
+			dis.close();
+			fis.close();
+			}catch(Exception e) {}
 		}
 		
 	}
