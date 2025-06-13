@@ -10,9 +10,9 @@
 <h2>SignUp Page</h2>
 <form action="SignUpcontroller" method="post">
 <label>EmailId</label>
-<input type="email" name="emailid"/><br/>
+<input type="email" name="emailid" required="required"/><br/>
 <label>Password</label>
-<input type="password" name="password"/><br/>
+<input type="password" name="password" required="required"/><br/>
 <input type="submit" value="SignUp"/>
 <input type="reset" value="reset"/>
 </form>

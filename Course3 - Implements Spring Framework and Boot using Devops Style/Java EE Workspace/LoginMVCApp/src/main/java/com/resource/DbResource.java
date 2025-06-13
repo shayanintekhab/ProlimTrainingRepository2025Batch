@@ -15,7 +15,7 @@ public class DbResource {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");  // load the driver 
 			// connect the db
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb_mvc", "root", "root@123");		
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/prolim_db", "root", "root@123");		
 		}catch(Exception e) {
 			System.err.println(e.toString());
 		}
