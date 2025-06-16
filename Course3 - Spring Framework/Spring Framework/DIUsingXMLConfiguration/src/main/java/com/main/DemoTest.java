@@ -47,8 +47,8 @@ public class DemoTest {
 //	System.out.println(emp8); 
 	
 	
-	Address add1 = (Address)obj.getBean("a1");
-	System.out.println(add1);
+	//Address add1 = (Address)obj.getBean("a1");
+	//System.out.println(add1);
 	
 	Employee emp9  = (Employee)obj.getBean("e5");
 	System.out.println(emp9);
