@@ -10,7 +10,7 @@ public class Employee {			// id is employee
 private int id;
 private String name;
 private float salary;
-@Autowired					// it is a property level annotation. 
+@Autowired					// it is a property level annotation. byType auto wired 
 private Address add;
 
 	public Employee() {
