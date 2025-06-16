@@ -7,7 +7,15 @@ private float salary;
 
 	public Employee() {
 		super();
-		System.out.println("object created...");
+		System.out.println("object created...with empty");
+	}
+
+	public Employee(int id, String name, float salary) {
+		super();
+		System.out.println("object created...with parameter");
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
 	}
 
 	public void display() {
