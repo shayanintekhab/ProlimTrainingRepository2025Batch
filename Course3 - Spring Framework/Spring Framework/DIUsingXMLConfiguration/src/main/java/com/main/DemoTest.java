@@ -19,6 +19,17 @@ public class DemoTest {
 	Employee emp1 = (Employee)obj.getBean("e1"); // pull the employee object from container 
 	emp1.display();
 
+	Employee emp2 = (Employee)obj.getBean("e1"); // pull the employee object from container 
+	emp2.display();
+	
+	System.out.println("---------------");
+
+	Employee emp3 = (Employee)obj.getBean("e2"); // pull the employee object from container 
+	emp3.display();
+
+	Employee emp4 = (Employee)obj.getBean("e2"); // pull the employee object from container 
+	emp4.display();
+	
 	}
 
 }
