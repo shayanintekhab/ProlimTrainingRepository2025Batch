@@ -41,9 +41,15 @@ public class DemoTest {
 	Employee emp7 = (Employee)obj.getBean("e3");		// singleton but inject to parameter constructor.
 	System.out.println(emp7);                          // call toString method we will what are the value set of container 
 	
+	
+	Employee emp8 = (Employee)obj.getBean("e4");		// setter base di
+	System.out.println(emp8); 
 	}
 
 }
+
+
+
 
 
 

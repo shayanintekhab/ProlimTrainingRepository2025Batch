@@ -17,4 +17,10 @@
 	<constructor-arg value="12000"></constructor-arg>
 </bean>
 
+<bean class="com.bean.Employee" id="e4">
+	<property name="id" value="101"></property>
+	<property name="name" value="Ajay"></property>
+	<property name="salary" value="34000"></property>
+</bean>
+
 </beans>
