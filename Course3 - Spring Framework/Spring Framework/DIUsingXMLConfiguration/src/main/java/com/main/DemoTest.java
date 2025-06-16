@@ -5,6 +5,7 @@ import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
+import com.bean.Address;
 import com.bean.Employee;
 
 public class DemoTest {
@@ -31,19 +32,26 @@ public class DemoTest {
 //	emp4.display();
 	
 	
-	Employee emp5 = (Employee)obj.getBean("e1");		// singleton by default empty constructor 
-	System.out.println(emp5);                          // call toString method and display default value of id,name,salary
+//	Employee emp5 = (Employee)obj.getBean("e1");		// singleton by default empty constructor 
+//	System.out.println(emp5);                          // call toString method and display default value of id,name,salary
+//	
+//	
+//	Employee emp6 = (Employee)obj.getBean("e2");		// prototype each time new memory created..empty constructor 
+//	System.out.println(emp6);                          // call toString method and display default value of id,name,salary
+//	
+//	Employee emp7 = (Employee)obj.getBean("e3");		// singleton but inject to parameter constructor.
+//	System.out.println(emp7);                          // call toString method we will what are the value set of container 
+//	
+//	
+//	Employee emp8 = (Employee)obj.getBean("e4");		// setter base di
+//	System.out.println(emp8); 
 	
 	
-	Employee emp6 = (Employee)obj.getBean("e2");		// prototype each time new memory created..empty constructor 
-	System.out.println(emp6);                          // call toString method and display default value of id,name,salary
+	Address add1 = (Address)obj.getBean("a1");
+	System.out.println(add1);
 	
-	Employee emp7 = (Employee)obj.getBean("e3");		// singleton but inject to parameter constructor.
-	System.out.println(emp7);                          // call toString method we will what are the value set of container 
-	
-	
-	Employee emp8 = (Employee)obj.getBean("e4");		// setter base di
-	System.out.println(emp8); 
+	Employee emp9  = (Employee)obj.getBean("e5");
+	System.out.println(emp9);
 	}
 
 }
