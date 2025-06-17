@@ -2,6 +2,7 @@ package com.service;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,6 +27,9 @@ public class ProductService {
 	}
 	
 
+	public List<Map<String, Object>> findAllRecordsAsMap() {
+		return productDao.findAllProductsAsMapObject();
+	}
 }
 
 
