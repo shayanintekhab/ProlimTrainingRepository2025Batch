@@ -30,6 +30,10 @@ public class ProductService {
 	public List<Map<String, Object>> findAllRecordsAsMap() {
 		return productDao.findAllProductsAsMapObject();
 	}
+	
+	public List<Product> findAllProductAsListOfProducts() {
+		return productDao.findAllProductsAsListOfProducts();
+	}
 }
 
 

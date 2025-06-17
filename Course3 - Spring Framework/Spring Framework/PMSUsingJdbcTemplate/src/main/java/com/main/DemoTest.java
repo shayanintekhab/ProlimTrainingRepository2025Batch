@@ -26,6 +26,11 @@ List<Map<String, Object>> listOfRecordsAsAMap=		ps.findAllRecordsAsMap();
 		Map<String, Object> mm = li.next();
 		System.out.println(mm);
 	}
+	System.out.println("------");
+	List<Product> listOfProduct = ps.findAllProductAsListOfProducts();
+	for(Product p: listOfProduct) {
+		System.out.println(p);
+	}
 	ac.close();
 	}
 

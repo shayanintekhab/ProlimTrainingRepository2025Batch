@@ -1,11 +1,14 @@
 package com.dao;
 
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.bean.Product;
@@ -56,10 +59,29 @@ public class ProductDao {
 		return null;
 	}
 
+	public List<Product> findAllProductsAsListOfProducts() {
+		try {
+	return jdbcTemplate.query("select * from product", new MyRowMapper());		
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+		return null;
+	}
 }
 
-
-
+// convert each record to object as global while loop 
+class MyRowMapper implements RowMapper<Product>{
+	@Override
+	public Product mapRow(ResultSet rs, int rowNum) throws SQLException {
+		// TODO Auto-generated method stub
+		System.out.println("row num "+rowNum);
+		Product p = new Product();
+		p.setPid(rs.getInt(1));
+		p.setName(rs.getString(2));
+		p.setPrice(rs.getFloat(3));
+		return p;
+	}
+}
 
 
 
