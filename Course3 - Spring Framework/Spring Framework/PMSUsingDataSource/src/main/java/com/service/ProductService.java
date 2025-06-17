@@ -1,5 +1,8 @@
 package com.service;
 
+import java.util.Iterator;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,4 +24,21 @@ public class ProductService {
 			return "Product didn't store";
 		}
 	}
+	
+	public List<Product> findAllProducts() {
+		// we can write some business logic. 
+		List<Product> listOfProduct = productDao.findProducts();
+		Iterator<Product> li = listOfProduct.iterator();
+		while(li.hasNext()) {
+			Product  p = li.next();
+			if(p.getPrice()>60000) {
+				p.setPrice(p.getPrice()-p.getPrice()*0.10f);
+			}else {
+				p.setPrice(p.getPrice()-p.getPrice()*0.20f);
+			}
+		}
+		return listOfProduct;
+	}
 }
+
+
