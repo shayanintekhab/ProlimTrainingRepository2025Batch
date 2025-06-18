@@ -78,15 +78,45 @@ public class DemoTest {
 //	Query qry = manager.createQuery("select p from Product p where p.pid=?1"); // ? parameter query 
 //	qry.setParameter(1, 101);
 	
-	Query qry = manager.createQuery("select p from Product p where p.pid=:product_id"); // label parameter query 
-	qry.setParameter("product_id", 101);
-
-	List<Product> listOfProduct= qry.getResultList();
-	System.out.println("number of records are "+listOfProduct.size());
-	for(Product p : listOfProduct) {
-		System.out.println(p);
-	}
+//	Query qry = manager.createQuery("select p from Product p where p.pid=:product_id"); // label parameter query 
+//	qry.setParameter("product_id", 101);
+//
+//	List<Product> listOfProduct= qry.getResultList();
+//	System.out.println("number of records are "+listOfProduct.size());
+//	for(Product p : listOfProduct) {
+//		System.out.println(p);
+//	}
 	
+	
+//	// retrieve only product id using JPQL partial object retrieve 
+//		Query qry = manager.createQuery("select p.pid from Product p");
+//		List<Integer> allProductIds= qry.getResultList();
+//		
+//		for(int  pid : allProductIds) {
+//			System.out.println(pid);
+//		}
+//	
+//	// retrieve only product name using JPQL partial object retrieve 
+//			Query qry = manager.createQuery("select p.pname from Product p");
+//			List<String> allProductNames= qry.getResultList();
+//			
+//			for(String  pname : allProductNames) {
+//				System.out.println(pname);
+//			}
+	
+	
+	// retrieve only product pname and price using JPQL partial object retrieve 
+	// same code for join concept. 
+			Query qry = manager.createQuery("select p.pname,p.price from Product p");
+			List<Object[]> allProductNameAndPrice= qry.getResultList();
+			
+			for(Object   row[] : allProductNameAndPrice) {
+				System.out.println("Name is "+row[0]+" Price "+row[1]);
+			}
+			
 	}
 
 }
+
+
+
