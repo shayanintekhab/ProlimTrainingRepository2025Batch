@@ -65,12 +65,28 @@ public class DemoTest {
 //	}
 	
 	// retrieve all records using JPQL 
-	Query qry = manager.createQuery("select p from Product p");
+//	Query qry = manager.createQuery("select p from Product p");
+//	List<Product> listOfProduct= qry.getResultList();
+//	System.out.println("number of records are "+listOfProduct.size());
+//	for(Product p : listOfProduct) {
+//		System.out.println(p);
+//	}
+
+	// retrieve all records using JPQL with conditions 
+	//Query qry = manager.createQuery("select p from Product p where p.pid=101");
+	//Query qry = manager.createQuery("select p from Product p where p.pname like 'Laptop'");
+//	Query qry = manager.createQuery("select p from Product p where p.pid=?1"); // ? parameter query 
+//	qry.setParameter(1, 101);
+	
+	Query qry = manager.createQuery("select p from Product p where p.pid=:product_id"); // label parameter query 
+	qry.setParameter("product_id", 101);
+
 	List<Product> listOfProduct= qry.getResultList();
 	System.out.println("number of records are "+listOfProduct.size());
 	for(Product p : listOfProduct) {
 		System.out.println(p);
 	}
+	
 	}
 
 }
