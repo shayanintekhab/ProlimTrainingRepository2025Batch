@@ -26,8 +26,18 @@ public class ProductController {
 	}
 	
 	@RequestMapping(value = "/addProductPage",method = RequestMethod.GET)
-	public String addProductPageOpen(Model mm) {  // DI for Model API for of spring mvc 
+	public String addProductPageOpen(Model mm,Product product) {  // DI for Model API for of spring mvc as well as product entity class 
 		mm.addAttribute("info", "Welcome to Product Management System");
+		mm.addAttribute("pp", product);   // store product object in model scope. 
+		return "addProduct";
+	}
+	
+	@RequestMapping(value = "/storeProduct",method = RequestMethod.POST)
+	public String storeProductInDb(Model mm,Product product) {  // DI for Model API for of spring mvc as well as product entity class 
+		mm.addAttribute("info", "Welcome to Product Management System");
+		String result = productService.storeProduct(product);
+		mm.addAttribute("pp", product);   // store product object in model scope.
+		mm.addAttribute("msg", result);
 		return "addProduct";
 	}
 	

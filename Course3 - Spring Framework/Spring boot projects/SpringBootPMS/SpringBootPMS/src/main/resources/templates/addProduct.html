@@ -5,9 +5,19 @@
 <title>Insert title here</title>
 </head>
 <body>
+<span th:text="${msg}" style="color:red"></span>
 <h2 th:text="${info}"></h2>
 <h3>Add Product</h3>
-
+<form action="#" th:action="@{/storeProduct}" method="post" th:object="${pp}">
+	<label>PId</label>
+	<input type="number" name="pid" th:field="*{pid}"/><br/>
+	<label>PName</label>
+	<input type="text" name="pname" th:field="*{pname}"/><br/>
+	<label>Price</label>
+	<input type="number" name="price" th:field="*{price}"/><br/>
+	<input type="submit" value="Store Product">
+	<input type="reset" value="reset">
+</form>
 
 <a href="/">Back</a>
 </body>
