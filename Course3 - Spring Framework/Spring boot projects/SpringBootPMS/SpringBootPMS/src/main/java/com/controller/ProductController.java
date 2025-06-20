@@ -36,6 +36,9 @@ public class ProductController {
 	public String storeProductInDb(Model mm,Product product) {  // DI for Model API for of spring mvc as well as product entity class 
 		mm.addAttribute("info", "Welcome to Product Management System");
 		String result = productService.storeProduct(product);
+		product.setPid(0);
+		product.setPname("");
+		product.setPrice(0.0f);
 		mm.addAttribute("pp", product);   // store product object in model scope.
 		mm.addAttribute("msg", result);
 		return "addProduct";
