@@ -68,9 +68,9 @@ public class EmployeeDao {
 		return qry.getResultList();
 	}
 	
-	public Employee findEmployee(Employee employee) {
+	public Employee findEmployee(int id) {
 		EntityManager manager = emf.createEntityManager();
-		Employee emp = manager.find(Employee.class, employee.getId());
+		Employee emp = manager.find(Employee.class, id);
 		if(emp==null) {
 			return null;
 		}else {
