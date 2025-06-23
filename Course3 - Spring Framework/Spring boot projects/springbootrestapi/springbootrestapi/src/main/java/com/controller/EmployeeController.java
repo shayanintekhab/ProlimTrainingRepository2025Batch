@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,4 +34,18 @@ public class EmployeeController {
 			allEmployees.add(emp3);
 			return allEmployees;
 		}
+		
+		// http://localhost:8080/storeEmployee
+		// method : post 
+		// {"id":100,"name":"Ravi","salary":45000}
+		// @RequestBody annotation convert request json data in java object.
+		@RequestMapping(value = "storeEmployee",method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE)
+		public String storeEmployee(@RequestBody Employee emp) {
+			System.out.println(emp);   	// override to String method in employee class  
+			// we pass to service layer 
+			return "Record stored";
+		}
 }
+
+
+
