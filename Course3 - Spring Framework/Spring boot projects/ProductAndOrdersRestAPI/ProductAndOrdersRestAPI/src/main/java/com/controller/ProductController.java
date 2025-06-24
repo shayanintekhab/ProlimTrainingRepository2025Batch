@@ -27,7 +27,7 @@ public class ProductController {
 	public String storeProduct(@RequestBody Product product) {
 		return productService.storeProduct(product);
 	}
-	@GetMapping(value = "find",consumes = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "find",produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Product> findAll() {
 		return productService.findAllProducts();
 	}
