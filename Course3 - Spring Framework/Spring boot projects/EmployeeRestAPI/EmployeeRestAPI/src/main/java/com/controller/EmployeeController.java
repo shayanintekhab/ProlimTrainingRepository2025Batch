@@ -65,7 +65,7 @@ public class EmployeeController {
 		// method : get 
 				
 		@RequestMapping(value = "findEmployee/{id}",
-				method = RequestMethod.GET)
+				method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
 		public Employee findEmployee(@PathVariable("id") int id) {
 			return employeeService.searchEmployeeById(id);
 		}

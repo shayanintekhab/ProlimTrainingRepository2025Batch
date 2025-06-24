@@ -6,11 +6,11 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @SpringBootApplication(scanBasePackages = "com")
 @EntityScan(basePackages = "com.bean")
-public class EmployeeRestApiApplication {
+public class ProductAndOrdersRestApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EmployeeRestApiApplication.class, args);
-		System.out.println("spring boot empoyee rest api up");
+		SpringApplication.run(ProductAndOrdersRestApiApplication.class, args);
+		System.out.println("spring boot jpa data up");
 	}
 
 }
