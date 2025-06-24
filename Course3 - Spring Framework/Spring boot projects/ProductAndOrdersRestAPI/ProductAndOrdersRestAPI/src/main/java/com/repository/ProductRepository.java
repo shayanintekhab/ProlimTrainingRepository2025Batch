@@ -7,5 +7,5 @@ import com.bean.Product;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer>{
-	// we can write custom with with JPQL query 
+	// we can write custom method with JPQL query if you need. 
 }
