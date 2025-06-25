@@ -23,6 +23,7 @@ public class ProductController {
 	@Autowired
 	ProductService productService;
 	//@RequestMapping(value = "store",method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE)
+	
 	@PostMapping(value = "store",consumes = MediaType.APPLICATION_JSON_VALUE)
 	public String storeProduct(@RequestBody Product product) {
 		return productService.storeProduct(product);
