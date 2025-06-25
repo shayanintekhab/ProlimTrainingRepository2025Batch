@@ -23,8 +23,7 @@ public class AccountService {
 			return "Account created successfully";
 		}
 	}
-	
-	public String createAccount(int accno) {
+	public String findBalance(int accno) {
 		Optional<Account> result = accountRepository.findById(accno);
 		if(result.isPresent()) {
 			Account account = result.get();
