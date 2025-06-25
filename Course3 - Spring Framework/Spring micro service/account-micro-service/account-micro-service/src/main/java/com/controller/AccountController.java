@@ -28,7 +28,7 @@ public class AccountController {
 	public String findBalance(@PathVariable int accno) {
 		return accountService.findBalance(accno);
 	}
-	@GetMapping(value = "findBalance/{emailid}")
+	@GetMapping(value = "findAccountNumber/{emailid}")
 	public int findAccountNumber(@PathVariable String emailid) {
 		return accountService.findAccountNumber(emailid);
 	}
