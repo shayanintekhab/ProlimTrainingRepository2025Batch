@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        function hello() {
+            alert("onClick event fired")
+        }
+        function sayHello() {
+            alert("onDblClick event fired")
+        }
+        function keyEventGenerate() {
+            console.log("event fired")
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Click Here - alert" onclick="alert('event fired')"/>
+    <input type="button" value="Click Here - single click" onclick="hello()"/>
+    <input type="button" value="Click Here - double click" ondblclick="sayHello()"/><br/>
+    <input type="text" name="fname" placeholder="Enter the text" onkeydown="keyEventGenerate()"/>
+</body>
+</html>
