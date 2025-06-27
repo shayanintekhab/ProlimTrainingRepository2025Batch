@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        function info() {
+            alert("Welcome to user defined function")
+        }
+        function addNumber(a,b){
+            var sum = a+b;
+            alert("Sum of two number is "+sum)
+        }
+        function checkLoginDetails(emailid,password){
+            if(emailid=="admin@gmail.com" && password=="admin@123"){
+                    return "successfully login"
+            } else {
+                    return "failure try once again"
+            }
+        }
+        //info();
+    </script>
+</head>
+<body>
+    <script type="text/JavaScript">
+        info();
+        addNumber(100,200);
+        var result1 = checkLoginDetails("admin@gmail.com","admin@123")
+        var result2 = checkLoginDetails("admin@gmail.com","admin");
+        alert(result1)
+        alert(result2)
+    </script>
+</body>
+</html>
