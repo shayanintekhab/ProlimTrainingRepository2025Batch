@@ -40,3 +40,23 @@ let findLargest2 = (a,b)=> {
 }
 document.writeln("<br/> Largest of two number using expression style "+findLargest1(100,50))
 document.writeln("<br/> Largest of two number using arrow style "+findLargest2(100,50))
+
+// callback function 
+//1st parameter is string value and 2nd parameter function name or function body 
+function greeting(fname,callback){
+    return "Welcome "+callback(fname)
+}
+let maleInfo = function(fname){
+    return "Mr "+fname;
+}
+let femaleInfo = (fname)=>"Miss "+fname;
+document.writeln("<br/>")
+document.writeln(greeting("Ravi",maleInfo))
+document.writeln("<br/>")
+document.writeln(greeting("Reeta",femaleInfo))
+document.writeln("<br/>")
+document.writeln(greeting("Ajay",function(fname){
+    return "Mr "+fname;
+}))
+document.writeln("<br/>")
+document.writeln(greeting("Veeta",(fname)=>"Miss "+fname))
