@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        function domOperation() {
+           // alert("Event fired")
+        // retrieve text field value using name attribute 
+        // var fname = document.getElementsByName("name")[0].value
+        // var lname = document.getElementsByName("name")[1].value
+        // var fullname = fname+" "+lname;
+        // //alert("Welcome user "+fullname) 
+        // document.getElementsByName("fullname")[0].value=fullname
+        // document.getElementsByName("name")[0].value="";
+        // document.getElementsByName("name")[1].value="";
+
+
+        // retrieve text field value using id attribute 
+        // var fname = document.getElementById("n1").value
+        // var lname = document.getElementById("n2").value
+        // var fullname = fname+" "+lname;
+        // //alert("Welcome user "+fullname) 
+        // document.getElementById("n3").value=fullname            // editable tag like text field 
+        // document.getElementById("output").innerHTML=fullname       // non editable tag like div tag 
+        // document.getElementById("n1").value="";
+        // document.getElementById("n2").value="";
+
+        // get tags values 
+        // var h1TagValue = document.getElementsByTagName("h1")[0].innerHTML
+        // alert(h1TagValue)
+        // var p1TagValue = document.getElementsByTagName("p")[0].innerHTML
+        // alert(p1TagValue)
+        // var p2TagValue = document.getElementById("p1").innerHTML;
+        // alert(p2TagValue)
+        // var p4TagValue = document.getElementsByClassName("abc")[1].innerHTML
+        // alert(p4TagValue) 
+        var allParaTags = document.getElementsByTagName("p")
+        alert("total number of para "+allParaTags.length)
+                for(var i=0;i<allParaTags.length;i++){
+                    alert(allParaTags[i].innerHTML)
+                }
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to Basic DOM Operation example</h1>
+    <p>First Para</p>
+    <p id="p1">Second Para</p>
+    <p class="abc">Third param</p>
+    <p class="abc">Fourth param</p>
+    FName :<input type="text" name="name" id="n1"/><br/>
+    LName :<input type="text" name="name" id="n2"/><br/>
+    Full Name :<input type="text" name="fullname" id="n3" readonly/><br/>
+    <div id="output"></div>
+    <input type="button" value="Click Here" onclick="domOperation()"/>
+    
+</body>
+</html>
