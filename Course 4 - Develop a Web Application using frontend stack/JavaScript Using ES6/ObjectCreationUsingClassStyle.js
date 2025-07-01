@@ -20,14 +20,35 @@
 // emp1.displayEmployeeInfo();
 
 // simple empty constructor example 
-class Employee {
-    constructor() {
-        document.writeln("object created")
-    }
-    display() {
-        document.writeln("<br/>This is employee class function")
-    }    
-}
-let emp1  = new Employee();
-emp1.display();
+// class Employee {
+//     constructor() {
+//         document.writeln("object created")
+//     }
+//     display() {
+//         document.writeln("<br/>This is employee class function")
+//     }    
+// }
+// let emp1  = new Employee();
+// emp1.display();
 
+// object creation with parameter constructor 
+class Employee {
+    id=0;
+    name = ""
+    salary = 0.0;
+    constructor(id,name,salary){
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+    displayEmployeeInfo() {
+        document.writeln("<br/> Employee details in display employee function ")
+        document.writeln("<br/> id is "+this.id)
+        document.writeln("<br/> id is "+this.name);
+        document.writeln("<br/> id is "+this.salary);
+    }
+}
+let emp1 = new Employee(100,"Ravi",34000);
+let emp2 = new Employee(101,"Mahesh",36000)
+emp1.displayEmployeeInfo();
+emp2.displayEmployeeInfo();
