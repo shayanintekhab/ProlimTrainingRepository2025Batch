@@ -6,7 +6,7 @@ document.writeln("<br/> Object format ")
 document.writeln("<br/> id is "+emp1.id)
 document.writeln("<br/> name is "+emp1.name)
 document.writeln("<br/> salary is "+emp1.salary)
-let empStringFormat = JSON.stringify(emp1); // converting object to string format 
+let empStringFormat = JSON.stringify(emp1) // converting object to string format 
 document.writeln("<br/> String format ")
 document.writeln("<br/> id is "+empStringFormat.id)
 document.writeln("<br/> name is "+empStringFormat.name)
@@ -19,5 +19,10 @@ document.writeln("<br/> salary is "+empJson.salary)
 console.log(emp1)
 console.log(empStringFormat)
 console.log(empJson)
+let empString1 = JSON.stringify(empJson);  
+document.writeln("<br/>"+empString1)
+document.writeln("<br/>"+empString1.id)
+
+
 
 
