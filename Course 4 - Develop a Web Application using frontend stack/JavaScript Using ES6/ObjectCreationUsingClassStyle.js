@@ -32,23 +32,78 @@
 // emp1.display();
 
 // object creation with parameter constructor 
+// class Employee {
+//     id=0;
+//     name = ""
+//     salary = 0.0;
+//     constructor(id,name,salary){
+//         this.id = id;
+//         this.name = name;
+//         this.salary = salary;
+//     }
+//     displayEmployeeInfo() {
+//         document.writeln("<br/> Employee details in display employee function ")
+//         document.writeln("<br/> id is "+this.id)
+//         document.writeln("<br/> id is "+this.name);
+//         document.writeln("<br/> id is "+this.salary);
+//     }
+// }
+// let emp1 = new Employee(100,"Ravi",34000);
+// let emp2 = new Employee(101,"Mahesh",36000)
+// emp1.displayEmployeeInfo();
+// emp2.displayEmployeeInfo();
+
+// object creation with parameter constructor without declaring variable outside constructor  
+// with default initialization 
+// class Employee {
+//     constructor(id=0,name="Unkown",salary=8000){
+//         this.id = id;
+//         this.name = name;
+//         this.salary = salary;
+//     }
+//     displayEmployeeInfo() {
+//         document.writeln("<br/> Employee details in display employee function ")
+//         document.writeln("<br/> id is "+this.id)
+//         document.writeln("<br/> name is "+this.name);
+//         document.writeln("<br/> salary is "+this.salary);
+//     }
+// }
+// let emp1 = new Employee(100,"Ravi",34000);
+// let emp2 = new Employee(101,"Mahesh",36000)
+// let emp3 = new Employee(102,"Ajay")
+// let emp4 = new Employee(103)
+// let emp5 = new Employee();
+// emp1.displayEmployeeInfo();
+// emp2.displayEmployeeInfo();
+// emp3.displayEmployeeInfo();
+// emp4.displayEmployeeInfo();
+// emp5.displayEmployeeInfo();
 class Employee {
-    id=0;
-    name = ""
-    salary = 0.0;
     constructor(id,name,salary){
-        this.id = id;
-        this.name = name;
-        this.salary = salary;
+    document.writeln("<br/> Employee class constructor")
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
     }
-    displayEmployeeInfo() {
-        document.writeln("<br/> Employee details in display employee function ")
-        document.writeln("<br/> id is "+this.id)
-        document.writeln("<br/> id is "+this.name);
-        document.writeln("<br/> id is "+this.salary);
+    displayEmployee() {
+        document.writeln("<br/>Employee class function")
+        document.writeln("<br/> id is "+this.id);
+        document.writeln("<br/> name is "+this.name);
+        document.writeln("<br/> salary is "+this.salary);    
     }
 }
-let emp1 = new Employee(100,"Ravi",34000);
-let emp2 = new Employee(101,"Mahesh",36000)
-emp1.displayEmployeeInfo();
-emp2.displayEmployeeInfo();
+class Manager extends Employee {
+    constructor(id,name,salary,numberOfEmp) {
+        super(id,name,salary);        // calling super class constructor 
+        this.numberOfEmp= numberOfEmp;
+    }
+    displayManager() {
+        document.writeln("<br/> Manager class function")
+    }
+}
+let emp1 = new Employee(1,"Ravi",34000);
+emp1.displayEmployee();
+let mgr1 = new Manager(2,"Mahesh",36000,10)
+mgr1.displayEmployee();
+mgr1.displayManager();
+
