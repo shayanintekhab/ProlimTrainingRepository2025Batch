@@ -24,8 +24,8 @@ let [products,setProducts]=useState([
                 </thead>
                 <tbody>
                 {
-                    products.map(product=>
-                        <tr>
+                    products.map((product,index)=>
+                        <tr key={product.pid}>
                             <td>{product.pid}</td>
                             <td>{product.pname}</td>
                             <td>{product.price}</td>
