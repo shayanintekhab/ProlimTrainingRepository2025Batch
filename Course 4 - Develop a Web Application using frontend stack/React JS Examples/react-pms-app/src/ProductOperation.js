@@ -10,11 +10,22 @@ let storeProductOrUpdate=(event)=> {
     event.preventDefault();         // disable action behaviour of submit button 
     //console.log(product)
     if(buttonValue=="Store Product"){
+    
+        const exists = products.some((item) => item.pid === product.pid);
+        if (exists) {
+        alert("Product with this ID already exists!");
+        return; 
+        }
+
         setProducts([...products,product]);         // ...products previous products, product new product 
-    }else {
-        alert("ready to update")
-        // logic 
         
+
+    }else {
+        // logic 
+        let productIndex = products.findIndex(p=>p.pid==product.pid);   // find index 
+        let tempProduct = [...products];        // we copy all product into tempProduct 
+        tempProduct[productIndex]=product;      // replace new value in tempProduct with index 
+        setProducts(tempProduct);           // then we update 
         setButtonValue("Store Product")
     }
     
@@ -33,7 +44,7 @@ let deleteProduct= (pid)=> {
 
 let setToUpdateProduct = (product)=> {
     setProduct(product);            // we pass product object of particular row and that we set to product state variable. 
-    setButtonValue("Update Button")
+    setButtonValue("Update Product")
 }
     return(
         <div>
@@ -42,7 +53,7 @@ let setToUpdateProduct = (product)=> {
                 <label>PId</label>
                 <input type="text" name="pid" 
                 onChange={(event)=>setProduct({...product,"pid":event.target.value})}
-                value={product.pid}
+                value={product.pid} disabled={buttonValue === "Update Product"}
                 /> <br/>
                 <label>PName</label>
                 <input type="text" name="pname" 
