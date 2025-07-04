@@ -9,6 +9,10 @@ let storeProduct=(event)=> {
     setProducts([...products,product]);         // ...products previous products, product new product 
     setProduct({pid:"",pname:"",price:"",url:""})
 }
+
+let deleteProduct= (pid)=> {
+    alert("delete function called.."+pid)
+}
     return(
         <div>
             <h2>Product Operation</h2>
@@ -45,6 +49,7 @@ let storeProduct=(event)=> {
                             <th>PName</th>
                             <th>Price</th>
                             <th>URL</th>
+                            <td>Delete</td>
                         </tr>
                 </thead>
                 <tbody>
@@ -55,6 +60,9 @@ let storeProduct=(event)=> {
                                 <td>{product.pname}</td>
                                 <td>{product.price}</td>
                                 <td><img src={product.url} width="100px" height="100px"/></td>
+                                <td>
+                                    <input type="button" value="Delete" onClick={()=>deleteProduct(product.pid)}/>
+                                </td>
                             </tr>
                         )
                     }
