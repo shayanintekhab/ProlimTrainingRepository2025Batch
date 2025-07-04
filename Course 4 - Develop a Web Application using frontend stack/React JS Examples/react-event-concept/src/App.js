@@ -1,5 +1,6 @@
 import ArrayVariableChange from "./ArrayVariableChange";
 import EventWithChangeValue from "./EventWithChangeValue";
+import ObjectValueChange from "./ObjectValueChange";
 import SimpleEventComponent from "./SimpleEventComponent";
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       {/* <SimpleEventComponent></SimpleEventComponent>
       <hr/>
       <EventWithChangeValue></EventWithChangeValue> */}
-      <ArrayVariableChange></ArrayVariableChange>
+      {/* <ArrayVariableChange></ArrayVariableChange> */}
+      <ObjectValueChange></ObjectValueChange>
     </div>
   );
 }
