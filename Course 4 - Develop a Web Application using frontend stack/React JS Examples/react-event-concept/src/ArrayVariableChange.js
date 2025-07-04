@@ -14,12 +14,24 @@ let handleOnChangeEvent=(event)=> {
    setTechnology(event.target.value);           // set the dynamic value in technology state variable. 
 }
 let addTechnology=(event)=> {
-    console.log(technology)
+    //console.log(technology)
     //technologies.push(technology);          // it didn't re-render 
     //setTechnologies(technology)                   // using spread operator 
-    setTechnologies([...technologies,technology]);   // 1st ...technologies hold previous data, 2nd parameter value append thedata 
-    //console.log(technologies);
-    setTechnology("");          // re-set 
+    //setTechnologies([...technologies,technology]);   // 1st ...technologies hold previous data, 2nd parameter value append thedata 
+    //setTechnology("");          // re-set 
+    //technologies.push(technology);
+    //setTechnologies(technologies);
+    //console.log(technologies)
+    
+    // 1st option to update 
+    let tech = [...technologies]        // we copy technologies state variable value in local tech
+    tech.push(technology);          // we added new value in tech local variable 
+    setTechnologies(tech)               // we replace new value in setTechnologies. it re-render. 
+    setTechnology("");
+
+    // 2nd option 
+    //setTechnologies([...technologies,technology]);   // 1st ...technologies hold previous data, 2nd parameter value append thedata 
+    //setTechnology("");          // re-set 
 }
     return(
         <div>
