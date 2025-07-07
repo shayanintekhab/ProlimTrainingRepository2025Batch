@@ -1,4 +1,5 @@
 import axios from "axios";
+import { use } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -6,11 +7,12 @@ function EmployeeOperation() {
 let URL  = "http://localhost:3000/employees";
 let [employees,setEmployees] = useState([]);        // array of employees to hold multiple employee data
 let [employee,setEmployee]=useState({name:"",salary:""});        // employee object to hold single employee data
+let [msg,setMessage]=useState("");
 useEffect(()=> {
     axios.get(URL)
         .then(result => setEmployees(result.data))
         .catch(err => console.log(err));
-},[employee])
+},[employee,msg])
 
 let addEmployee = (event)=> {
     event.preventDefault();
@@ -23,6 +25,18 @@ let addEmployee = (event)=> {
     })
     setEmployee({name:"",salary:""});
 
+}
+
+                                                
+let deleteEmployee = (id)=> {
+        //alert("Deleting Employee with id "+id);
+        setMessage("")
+        axios.delete(URL+"/"+id).then(result=> {
+                console.log(result)
+                setMessage(result.statusText)
+        }).catch(error=> {
+            console.log(error)
+        })
 }
     return(
         <div>
@@ -47,6 +61,7 @@ let addEmployee = (event)=> {
                                     <th>Id</th>
                                     <th>Name</th>
                                     <th>Salary</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -56,6 +71,11 @@ let addEmployee = (event)=> {
                                             <td>{emp.id}</td>
                                             <td>{emp.name}</td>
                                             <td>{emp.salary}</td>
+                                            <td>
+                                                <input type="button" value="Delete"
+                                                onClick={()=>deleteEmployee(emp.id)}
+                                                />
+                                            </td>
                                         </tr>
                                     ))
                                 }
