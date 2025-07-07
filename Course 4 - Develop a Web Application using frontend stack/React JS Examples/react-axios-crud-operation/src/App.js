@@ -1,9 +1,11 @@
+import EmployeeOperation from "./EmployeeOperations";
 import Products from "./Products";
 
 function App() {
   return (
     <div>
-      <Products></Products>
+      {/* <Products></Products> */}
+      <EmployeeOperation></EmployeeOperation>
     </div>
   );
 }
