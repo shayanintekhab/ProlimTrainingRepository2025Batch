@@ -7,6 +7,10 @@ let addUser= ()=> {
     setUsers([...users,name])   // add the new user to the users array
     setName("");        // clear the input field after adding a user
 }
+let handleDeleteUser = (userToDelete)=> {
+    //alert("In parent component: " + user);
+    setUsers(users.filter(user=>user!=userToDelete))
+}
     return(
         <div>
             <h2>Add Users</h2>
@@ -17,7 +21,7 @@ let addUser= ()=> {
             <input type="button" value="Add User"
             onClick={addUser}/>
             <hr/>
-            <DisplayUsers userDetails={users}/>
+            <DisplayUsers userDetails={users} onDeleteUser={handleDeleteUser}/>
         </div>
     )
 }
