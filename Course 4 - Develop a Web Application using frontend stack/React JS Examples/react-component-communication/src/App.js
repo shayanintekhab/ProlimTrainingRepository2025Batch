@@ -5,7 +5,7 @@ import Parent from './Parent';
 function App() {
   return (
     <div>
-      <Parent></Parent>
+      <Parent msg="Welcome to React JS component communication"></Parent>
     </div>
   );
 }
