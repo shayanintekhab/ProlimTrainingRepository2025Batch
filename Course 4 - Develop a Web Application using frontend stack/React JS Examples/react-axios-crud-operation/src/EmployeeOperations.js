@@ -25,8 +25,15 @@ let addEmployee = (event)=> {
     })
     setEmployee({name:"",salary:""});
 
+    // in else part we are updating the employee details
+    // 1st parameter is URL with employee id, 2nd parameter data in json format.
+    // axios.put(URL+"/"+employee.id,employee).then().catch()
+
 }
 
+let setEmployeeDetailsToUpdate = (emp)=> {
+    setEmployee(emp);
+}
                                                 
 let deleteEmployee = (id)=> {
         //alert("Deleting Employee with id "+id);
@@ -62,6 +69,7 @@ let deleteEmployee = (id)=> {
                                     <th>Name</th>
                                     <th>Salary</th>
                                     <th>Delete</th>
+                                    <th>Update</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -74,6 +82,11 @@ let deleteEmployee = (id)=> {
                                             <td>
                                                 <input type="button" value="Delete"
                                                 onClick={()=>deleteEmployee(emp.id)}
+                                                />
+                                            </td>
+                                            <td>
+                                                <input type="button" value="Update"
+                                                onClick={()=>setEmployeeDetailsToUpdate(emp)}
                                                 />
                                             </td>
                                         </tr>
