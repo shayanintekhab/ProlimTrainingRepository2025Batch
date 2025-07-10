@@ -8,8 +8,9 @@ import com.bean.Employee;
 public class EmployeeService {
 	
 	public Employee getEmployee() {
-		Employee emp1 = new Employee(100, "Ravi", 45000, "Developer");
+		Employee emp1 = new Employee(100, "Ravi", 45000.50f, "Developer");
 		return emp1;
+		//return null;
 	}
 	
 	public String storeEmployee(Employee emp) {
