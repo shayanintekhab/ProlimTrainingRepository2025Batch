@@ -5,10 +5,13 @@ import java.util.Iterator;
 import java.util.List;
 
 import com.bean.Account;
+import com.dao.AccountDao;
 
 public class AccountService {
 
 	private List<Account> listOfAccount = new ArrayList<Account>();
+	
+	AccountDao ad = new AccountDao();
 	
 	public String accountCreate(Account account) {		// accno must be unique, amount > 1000 
 		int flag=0;
@@ -54,6 +57,12 @@ public class AccountService {
 	public Account getAccountDetails(int accno) {
 		
 		return null;
+	}
+	
+	public List<Account> findAllAccountsFromDb() {
+		// we can write some conditions. 
+		System.out.println("I Came to service layer");
+		return ad.getAllAccount();
 	}
 }
 
