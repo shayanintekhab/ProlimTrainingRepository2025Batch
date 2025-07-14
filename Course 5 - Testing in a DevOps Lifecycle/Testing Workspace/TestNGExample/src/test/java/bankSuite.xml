@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="Test">
+  	<groups>
+  		<run>
+  			<include name="withdraw_functionality"/>
+  		</run>
+  	</groups>
+    <classes>
+      <class name="com.service.Sbi"/>
+      <class name="com.service.Hdfc"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
