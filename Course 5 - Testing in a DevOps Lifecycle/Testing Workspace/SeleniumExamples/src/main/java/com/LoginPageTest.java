@@ -32,7 +32,10 @@ public class LoginPageTest {
 		String targetPageURL = driver.getCurrentUrl();
 		System.out.println(targetPageURL);
 		
-		driver.close();
+		driver.navigate().back();
+		
+		
+		//driver.close();
 	}
 
 }
