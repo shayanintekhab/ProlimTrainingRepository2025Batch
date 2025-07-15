@@ -35,6 +35,7 @@ public class LoginPageTest extends BaseAutomationTest{
 	}
 	  if(exptectedSuccess) {
 		  assertTrue(lp.isLoggingSuccessfully());
+		  
 	  }else {
 		  String actualErrorMessage = lp.getErrorMessage();
 		  assertEquals(actualErrorMessage, expectedErrorMessage);
