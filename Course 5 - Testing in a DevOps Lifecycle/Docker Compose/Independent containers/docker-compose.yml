@@ -1,0 +1,11 @@
+services:
+  akash-service:
+    image: akashkale/my-reactjs:pro1
+    container_name: akash_container
+    ports:
+      - "81:80"
+  nginx-service:
+    image: nginx:latest 
+    container_name: nginx_container
+    ports:
+      - "80:80"
