@@ -10,10 +10,16 @@ services:
     restart: always
   spring-boot-service:
     #image: akashkale/springboot:v1
-    build: .
+    build: ./backend/spring-user-service/
     container_name: spring_boot_container
     ports:
       - "9090:9090"
     depends_on:
       - mysqldb-service
     restart: always
+  reactjs-service:
+    build: ./frontend/react-user-app/
+    container_name: reactjs_container
+    ports:
+      - "81:80"
+    restart: always 
