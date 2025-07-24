@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+
   mysqldb-service:
     image: mysql:8.0
     container_name: mysql_container
@@ -12,8 +13,7 @@ services:
     restart: always
 
   spring-boot-service:
-    image: shayanintekhab/springboot:prolim_backend_v1
-    build: ./backend/spring-user-service/
+    build: ./backend/spring-user-service
     container_name: spring_boot_container
     ports:
       - "9090:9090"
@@ -22,8 +22,8 @@ services:
     restart: always
 
   reactjs-service:
-    image: shayanintekhab/reactjs:prolim_frontend_v1
-    build: ./frontend/react-user-app/
+    build: ./frontend/react-user-app
+    # ← make sure you have a Dockerfile in frontend/react-user-app/
     container_name: reactjs_container
     ports:
       - "81:80"
